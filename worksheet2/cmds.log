@@ -1,0 +1,83 @@
+    1  passwd
+    2  ls
+    3  ls -a
+    4  mkdir CS185C-Assignments
+    5  cd CS185C-Assignments/
+    6  git init
+    7  mkdir worksheet1
+    8  cd ../
+    9  wget    https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_02.tsv.gz
+   10  cd CS185C-Assignments/worksheet1/
+   11  history > cmds.log
+   12  ls -a
+   13  cat cmds.log
+   14  git push
+   15  git remote add origin https://github.com/benjamingarcia10/CS185C-Assignments.git
+   16  git push -u origin master
+   17  git push -u origin main
+   18  git branch -M main
+   19  git status
+   20  git add .
+   21  git status
+   22  git commit -m "Uploading command logs"
+   23  git config --global user.email "benjamin.garcia@sjsu.edu"
+   24  git config --global user.name "Benjamin Garcia"
+   25  git commit -m "Uploading command logs"
+   26  git push -u origin main
+   27  git status
+   28  git push
+   29  git push --set-upstream origin master
+   30  gh auth login
+   31  git push origin master
+   32  ls -altr
+   33  tar zxvf amazon_reviews_us_Books_v1_02.tsv.gz
+   34  ls -altr
+   35  gzip -dk amazon_reviews_us_Books_v1_02.tsv.gz 
+   36  ls -altr
+   37  vi amazon_reviews_us_Books_v1_02.tsv
+   38  clear
+   39  cat amazon_reviews_us_Books_v1_02.tsv
+   40  head amazon_reviews_us_Books_v1_02.tsv
+   41  clear
+   42  head amazon_reviews_us_Books_v1_02.tsv -n 10
+   43  awk -F"\t" '{print $12}' amazon_reviews_us_Books_v1_02.tsv
+   44  clear
+   45  awk -F"\t" '{print $12}' amazon_reviews_us_Books_v1_02.tsv
+   46  clear
+   47  awk -F"\t" '{print $12}' amazon_reviews_us_Books_v1_02.tsv > results.txt
+   48  head results.txt -n 10
+   49  grep -h "Y" > verified.txt
+   50  clear
+   51  grep -h "Y" results.txt > verified.txt
+   52  head verified.txt -n 10
+   53  wc verified.txt 
+   54  grep -h "N" results.txt > unverified.txt
+   55  wc unverified.txt 
+   56  wc amazon_reviews_us_Books_v1_02.tsv
+   57  wc -l amazon_reviews_us_Books_v1_02.tsv
+   58  wc -l unverified.txt 
+   59  wc -l verified.txt 
+   60  wc -l verified.txt > counts.txt
+   61  wc -l unverified.txt >> counts.txt
+   62  cat counts.txt 
+   63  wc verified.txt > counts.txt
+   64  wc unverified.txt >> counts.txt
+   65  cat counts.txt 
+   66  ls -a
+   67  ls -al CS185C-Assignments/
+   68  cd CS185C-Assignments/
+   69  mkdir worksheet2
+   70  ls -al
+   71  cd /
+   72  ls -al
+   73  cd home
+   74  ls
+   75  cd garcia
+   76  ls
+   77  mv counts.txt CS185C-Assignments/worksheet2
+   78  cd -al
+   79  ls -al
+   80  cd CS185C-Assignments/worksheet2
+   81  ls -al
+   82  cat counts.txt 
+   83  history > cmds.log
