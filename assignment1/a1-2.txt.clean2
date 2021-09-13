@@ -1,0 +1,9 @@
+Script started on 2021-09-13 05:53:43+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="126" LINES="62"]
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ grep -i "great" [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls
+CS185C-Assignments  amazon_reviews_us_Books_v1_02.tsv  amazon_reviews_us_Books_v1_02.tsv.gz  temp
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ grep -i "great" amazon_reviews_us_Books_v1_02.tsv | wc
+ 857172 178638497 1049453676
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ exit
+
+Script done on 2021-09-13 06:00:30+00:00 [COMMAND_EXIT_CODE="0"]

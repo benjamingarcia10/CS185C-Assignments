@@ -1,0 +1,980 @@
+Script started on 2021-09-13 05:18:19+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ echo $HOME
+/home/garcia
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ cd[K[Kcd
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ pwd
+/home/garcia
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ echo $UID
+1002
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ groups
+garcia
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ groups garcia
+garcia : garcia
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ groups 100[K[K[K[K[K[K[K[K[K[Kls [K
+CS185C-Assignments                 amazon_reviews_us_Books_v1_02.tsv.gz
+amazon_reviews_us_Books_v1_02.tsv
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ mkdir temp
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls -l
+total 4461192
+drwxrwxr-x 6 garcia garcia       4096 Sep 13 05:12 CS185C-Assignments
+-rw-rw-r-- 1 garcia garcia 3238702530 Nov 24  2017 amazon_reviews_us_Books_v1_02.tsv
+-rw-rw-r-- 1 garcia garcia 1329539135 Nov 24  2017 amazon_reviews_us_Books_v1_02.tsv.gz
+drwxrwxr-x 2 garcia garcia       4096 Sep 13 05:22 temp
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ [K]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ [K]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ chmod u=rw temp
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls -l
+total 4461192
+drwxrwxr-x 6 garcia garcia       4096 Sep 13 05:12 CS185C-Assignments
+-rw-rw-r-- 1 garcia garcia 3238702530 Nov 24  2017 amazon_reviews_us_Books_v1_02.tsv
+-rw-rw-r-- 1 garcia garcia 1329539135 Nov 24  2017 amazon_reviews_us_Books_v1_02.tsv.gz
+drw-rwxr-x 2 garcia garcia       4096 Sep 13 05:22 temp
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ cd temp
+bash: cd: temp: Permission denied
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls temp
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls temp/
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls temp/[K[K[K[K[K[K -l temp
+total 0
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ cd temp
+bash: cd: temp: Permission denied
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ mv temp CS185C-Assignments/a[Kassignment1/
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls -a[Ka
+.   .bash_history  .bashrc  .profile            amazon_reviews_us_Books_v1_02.tsv
+..  .bash_logout   .cache   CS185C-Assignments  amazon_reviews_us_Books_v1_02.tsv.gz
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ cd CS185C-Assignments/
+]0;garcia@f6linuxa11: ~/CS185C-Assignmentsgarcia@f6linuxa11:~/CS185C-Assignments$ cd assignment1/
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ ls
+a1.txt  temp
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ cp temp /
+cp: -r not specified; omitting directory 'temp'
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ cp -r temp /
+cp: cannot create directory '/temp': Permission denied
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ echo $HOME
+/home/garcia
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ cp -r temp /home/garcia
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ cd /home/garcia
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls
+CS185C-Assignments                 amazon_reviews_us_Books_v1_02.tsv.gz
+amazon_reviews_us_Books_v1_02.tsv  temp
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls -latr /proc/
+total 4
+drwxr-xr-x  20 root             root                         4096 Jul 19 13:51 ..
+lrwxrwxrwx   1 root             root                            0 Aug 27 03:09 thread-self -> 291385/task/291385
+lrwxrwxrwx   1 root             root                            0 Aug 27 03:09 self -> 291385
+dr-xr-xr-x 863 root             root                            0 Aug 27 03:09 .
+dr-xr-xr-x   1 root             root                            0 Aug 27 03:09 sys
+-r--------   1 root             root             3377699724787712 Aug 27 03:09 kcore
+dr-xr-xr-x   9 root             root                            0 Aug 27 03:09 1
+-r--r--r--   1 root             root                            0 Aug 27 03:09 swaps
+-r--------   1 root             root                            0 Aug 27 03:09 kmsg
+-r--r--r--   1 root             root                            0 Aug 27 03:09 kallsyms
+dr-xr-xr-x   8 root             root                            0 Aug 27 03:09 irq
+dr-xr-xr-x   7 root             root                            0 Aug 27 03:09 fs
+dr-xr-xr-x   4 root             root                            0 Aug 27 03:09 bus
+--w-------   1 root             root                            0 Aug 27 03:09 sysrq-trigger
+dr-xr-xr-x   5 root             root                            0 Aug 27 03:09 scsi
+dr-xr-xr-x  10 root             root                            0 Aug 27 03:09 powerpc
+dr-xr-xr-x   9 garcia           garcia                          0 Sep 13 05:09 291060
+-r--r--r--   1 root             root                            0 Sep 13 05:14 filesystems
+-r--r--r--   1 root             root                            0 Sep 13 05:14 stat
+-r--r--r--   1 root             root                            0 Sep 13 05:14 interrupts
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:14 1294
+lrwxrwxrwx   1 root             root                            8 Sep 13 05:15 net -> self/net
+dr-xr-xr-x   9 systemd-resolve  systemd-resolve                 0 Sep 13 05:15 1251
+dr-xr-xr-x   9 systemd-network  systemd-network                 0 Sep 13 05:15 1249
+dr-xr-xr-x   9 systemd-timesync systemd-timesync                0 Sep 13 05:15 1215
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:15 961
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:15 1301
+dr-xr-xr-x   9 garcia           garcia                          0 Sep 13 05:18 291309
+-r--r--r--   1 root             root                            0 Sep 13 05:41 zoneinfo
+-r--r--r--   1 root             root                            0 Sep 13 05:41 vmstat
+-r--------   1 root             root                            0 Sep 13 05:41 vmallocinfo
+-r--r--r--   1 root             root                            0 Sep 13 05:41 version_signature
+-r--r--r--   1 root             root                            0 Sep 13 05:41 version
+-r--r--r--   1 root             root                            0 Sep 13 05:41 uptime
+dr-xr-xr-x   6 root             root                            0 Sep 13 05:41 tty
+-r--------   1 root             root                            0 Sep 13 05:41 timer_list
+dr-xr-xr-x   5 root             root                            0 Sep 13 05:41 sysvipc
+-r--r--r--   1 root             root                            0 Sep 13 05:41 softirqs
+-r--------   1 root             root                            0 Sep 13 05:41 slabinfo
+-r--r--r--   1 root             root                            0 Sep 13 05:41 schedstat
+-r--r--r--   1 root             root                            0 Sep 13 05:41 sched_debug
+lrwxrwxrwx   1 root             root                           12 Sep 13 05:41 rtas -> powerpc/rtas
+dr-xr-xr-x   5 root             root                            0 Sep 13 05:41 pressure
+lrwxrwxrwx   1 root             root                            7 Sep 13 05:41 ppc64 -> powerpc
+-r--r--r--   1 root             root                            0 Sep 13 05:41 partitions
+-r--------   1 root             root                            0 Sep 13 05:41 pagetypeinfo
+lrwxrwxrwx   1 root             root                           11 Sep 13 05:41 mounts -> self/mounts
+-r--r--r--   1 root             root                            0 Sep 13 05:41 modules
+-r--r--r--   1 root             root                            0 Sep 13 05:41 misc
+-r--r--r--   1 root             root                            0 Sep 13 05:41 meminfo
+-r--r--r--   1 root             root                            0 Sep 13 05:41 mdstat
+-r--r--r--   1 root             root                            0 Sep 13 05:41 locks
+-r--r--r--   1 root             root                            0 Sep 13 05:41 loadavg
+-r--------   1 root             root                            0 Sep 13 05:41 kpageflags
+-r--------   1 root             root                            0 Sep 13 05:41 kpagecount
+-r--------   1 root             root                            0 Sep 13 05:41 kpagecgroup
+-r--r--r--   1 root             root                            0 Sep 13 05:41 keys
+-r--r--r--   1 root             root                            0 Sep 13 05:41 key-users
+-r--r--r--   1 root             root                            0 Sep 13 05:41 ioports
+-r--r--r--   1 root             root                            0 Sep 13 05:41 iomem
+-r--r--r--   1 root             root                            0 Sep 13 05:41 fb
+-r--r--r--   1 root             root                            0 Sep 13 05:41 execdomains
+dr-xr-xr-x   3 root             root                            0 Sep 13 05:41 driver
+-r--r--r--   1 root             root                            0 Sep 13 05:41 dma
+-r--r--r--   1 root             root                            0 Sep 13 05:41 diskstats
+-r--r--r--   1 root             root                            0 Sep 13 05:41 devices
+lrwxrwxrwx   1 root             root                           29 Sep 13 05:41 device-tree -> /sys/firmware/devicetree/base
+-r--r--r--   1 root             root                            0 Sep 13 05:41 crypto
+-r--r--r--   1 root             root                            0 Sep 13 05:41 cpuinfo
+-r--r--r--   1 root             root                            0 Sep 13 05:41 consoles
+-r--r--r--   1 root             root                            0 Sep 13 05:41 cmdline
+-r--r--r--   1 root             root                            0 Sep 13 05:41 cgroups
+-r--r--r--   1 root             root                            0 Sep 13 05:41 buddyinfo
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 99
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 98
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 962
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 960
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 96
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 958
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 955
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 953
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 950
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 95
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 948
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 947
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 943
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 940
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 94
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 939
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 938
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 937
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 93390
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 93389
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 93
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 928
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 92
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 916
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 914
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 907
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 905
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 904
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 901
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 90
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 9
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 896
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 895
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 892
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 891
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 890
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 89
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 887
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 886
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 88
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 872
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 871
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 87
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 865
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 862
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 860
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 86
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 859
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 85604
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 85595
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 855
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 850
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 85
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 84
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 83
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 824
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 823
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 822
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 821
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 82
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 819
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 81
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 80
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 8
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 78
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 777
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 77
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 76
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 757
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 754
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 753
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 752
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 750
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 75
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 749
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 748
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 747
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 746
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 745
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 744
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 743
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 74
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 736
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 733
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 732
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 730
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 728
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 725
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 724
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 723
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 721
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 720
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 72
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 717
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 715
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 713
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 712
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 711
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 710
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 71
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 709
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 708
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 707
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 702
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 70
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 698
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 697
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 691
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 69
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 688
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 687
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 686
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 685
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 68
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 67293
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 666
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 664
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 66
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 655
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 650
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 65
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 647
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 645
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 64
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 639
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 63
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 62
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 60
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 6
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 590
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 59
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 58
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 577
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 574
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 57
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 565
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 564
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 563
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 562
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 560
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 56
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 559
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 555
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 554
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 553
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 552
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 551
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 550
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 55
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 549
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 548
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 547
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 546
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 54
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 53
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 52
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 51
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 500
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 50
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 499
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 498
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 497
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 496
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 495
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 493
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 492
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 491
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 490
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 49
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 489
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 488
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 486
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 485
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 484
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 483
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 482
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 481
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 480
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 48
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 479
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 478
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 477
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 476
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 475
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 474
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 473
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 472
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 471
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 470
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 47
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 469
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 468
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 467
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 466
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 465
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 464
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 462
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 461
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 460
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 46
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 459
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 458
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 456
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 455
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 454
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 453
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 452
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 450
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 45
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 449
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 448
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 447
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 446
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 444
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 443
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 442
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 441
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 440
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 44
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 439
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 438
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 437
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 436
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 435
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 434
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 433
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 432
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 431
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 430
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 43
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 429
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 428
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 427
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 426
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 425
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 424
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 423
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 42219
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 422
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 420
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 42
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 419
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 418
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 417
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 416
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 414
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 413
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 412
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 411
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 410
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 41
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 408
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 407
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 406
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 405
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 404
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 402
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 401
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 400
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 40
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 4
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 399
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 398
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 396
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 395
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 394
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 393
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 392
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 391
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 390
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 39
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 389
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 388
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 387
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 386
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 385
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 384
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 383
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 382
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 381
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 380
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 38
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 378
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 377
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 376
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 375
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 374
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 372
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 371
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 370
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 37
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 369
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 368
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 366
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 365
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 364
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 363
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 362
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 360
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 36
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 359
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 358
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 357
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 356
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 354
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 353
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 352
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 351
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 350
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 35
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 348
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 347
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 346
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 345
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 344
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 342
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 341
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 340
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 34
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 339
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 338
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 336
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 335
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 334
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 333
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 332
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 330
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 33
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 329
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 328
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 327
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 326
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 324
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 323
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 322
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 321
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 320
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 32
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 318
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 317
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 316
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 315
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 314
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 312
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 311
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 310
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 309
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 308
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 306
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 305
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 304
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 303
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 302
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 300
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 30
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 3
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 299
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 298
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 297
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 296
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 295
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 294
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 293
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 292
+dr-xr-xr-x   9 garcia           garcia                          0 Sep 13 05:41 291385
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 291341
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 291334
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 291317
+dr-xr-xr-x   9 garcia           garcia                          0 Sep 13 05:41 291310
+dr-xr-xr-x   9 garcia           garcia                          0 Sep 13 05:41 291232
+dr-xr-xr-x   9 garcia           garcia                          0 Sep 13 05:41 291231
+dr-xr-xr-x   9 garcia           garcia                          0 Sep 13 05:41 291171
+dr-xr-xr-x   9 garcia           garcia                          0 Sep 13 05:41 291170
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 291063
+dr-xr-xr-x   9 garcia           garcia                          0 Sep 13 05:41 291062
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 291051
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 291
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 290820
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 290818
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 290178
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 290167
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 290
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 29
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 289287
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 289
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 288713
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 288710
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 288709
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 288701
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 288675
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 288671
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 288668
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 288
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 287
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 286
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 285868
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 285
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 284
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 283446
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 283436
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 283084
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 283027
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 283
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 282308
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 282307
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 282
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 281047
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 281013
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 281008
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 281
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 280668
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 280392
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 280386
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 280377
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 280376
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 280321
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 280038
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 280037
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 280
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 28
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 279
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 278
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 277931
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 277611
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 277
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 276
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 275485
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 275482
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 275109
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 275
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 274902
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 274677
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 274175
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 274
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 273
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 272211
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 272205
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 272
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 270
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 27
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 269
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 268541
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 268
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 267902
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 267
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 266747
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 266744
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 266
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 264
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 263378
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 263
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 262749
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 262
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 261
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 260
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 26
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 259099
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 258736
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 258
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 257
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 256
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 255689
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 255600
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 255594
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 255364
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 255355
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 25500
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 255
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 254978
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 254
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 253001
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 252952
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 252328
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 252250
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 252
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 251613
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 251
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 250
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 249300
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 249
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 248
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 247
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246839
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246838
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246837
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246836
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246835
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246834
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246833
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246832
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246831
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246830
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246829
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246828
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246827
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246826
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246825
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246824
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246823
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246822
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246821
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246820
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246819
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246818
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246817
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246816
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246815
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246814
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246813
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246812
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246811
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246810
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246809
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246808
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246807
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246806
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246805
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246804
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246803
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246802
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246801
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246800
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246799
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246798
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246797
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246796
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246795
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246794
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246793
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246792
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246791
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246790
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246789
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246788
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246787
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246786
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246785
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246784
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246783
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246782
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246781
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246780
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246779
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246778
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246777
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246776
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246775
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246774
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246770
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246768
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 246
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 245
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 244
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 243
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 242
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 241
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 240
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 24
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 239
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 238
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 237
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 236
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 235
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 234
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 233
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 232838
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 232
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 231
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 230
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 23
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 229005
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 228
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 227
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 226
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 225
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 224
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 223577
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 223574
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 222
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 221935
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 221
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 220
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 22
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 219
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 218
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 216
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 215
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 214
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 213
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 212
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 211249
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 210
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 21
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 209
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 208920
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 208
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 207712
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 207
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 206964
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 206
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 204
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 203
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 202
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 201
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 200
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 20
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 2
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 199
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 198
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 197
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 196
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 195
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 194
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 192
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 191
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 190
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 189
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 188
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 186
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 185
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 184
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 183262
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 183
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 182
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 180
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 18
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 179
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 178
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 177
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 176
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 174565
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 174
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 173
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 172
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 171
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 170
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 17
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 168
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 167
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 166
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 165
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 164
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 162573
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 162
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 161
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 160
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 16
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 159
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 158
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 156579
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 156
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 155
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1541
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1540
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 154
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1539
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1538
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1537
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1536
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1535
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1534
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1533
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1532
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1531
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1530
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 153
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1529
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1528
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 152
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 151
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1506
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 150
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 15
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 149
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 148
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 147
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1465
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 146
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1453
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 144
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 143
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1422
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 142
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1419
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 141
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 140
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 14
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 139
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 138
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 137
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1364
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1363
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1362
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 136
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1358
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1355
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1350
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 135
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1348
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 134
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1339
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1338
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1336
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 133
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1328
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1321
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 132
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1316
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1314
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1311
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 131
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1309
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 130782
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1307
+dr-xr-xr-x   9 daemon           daemon                          0 Sep 13 05:41 1303
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 130
+dr-xr-xr-x   9 syslog           syslog                          0 Sep 13 05:41 1290
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 129
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1286
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1285
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1284
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1283
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1282
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 128
+dr-xr-xr-x   9 messagebus       messagebus                      0 Sep 13 05:41 1276
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1273
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 127
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1269
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 126
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1256
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1255
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1254
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 125
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1247
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 124
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 123
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1225
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1220
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 122
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1213
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1211
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1210
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1204
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 120
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 12
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 119
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1185
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1183
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1182
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1181
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 118
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1179
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1178
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1177
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1176
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1175
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1174
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 117
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1168
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 116
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1159
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 115821
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1158
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1157
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1156
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1155
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1154
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1153
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1145
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 114
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 113
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1123
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 112
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 111
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 110
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 11
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1099
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1093
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 108
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1078
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 107
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1064
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1062
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 106
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 105
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1041
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1040
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 104
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 102
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 101
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 100
+dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 10
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ [K]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ [K]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/meminfo
+MemTotal:        4049408 kB
+MemFree:          262336 kB
+MemAvailable:     869248 kB
+Buffers:           48832 kB
+Cached:           898048 kB
+SwapCached:        12736 kB
+Active:           196032 kB
+Inactive:         917056 kB
+Active(anon):      75008 kB
+Inactive(anon):   116288 kB
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/cpuinfo 
+.bash_history                         .cache/                               amazon_reviews_us_Books_v1_02.tsv
+.bash_logout                          .profile                              amazon_reviews_us_Books_v1_02.tsv.gz
+.bashrc                               CS185C-Assignments/                   temp/
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/cpuinfo 
+.bash_history                         .cache/                               amazon_reviews_us_Books_v1_02.tsv
+.bash_logout                          .profile                              amazon_reviews_us_Books_v1_02.tsv.gz
+.bashrc                               CS185C-Assignments/                   temp/
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/cpuinfo 
+processor	: 0
+cpu		: POWER8 (architected), altivec supported
+clock		: 4190.000000MHz
+revision	: 2.0 (pvr 004d 0200)
+
+processor	: 1
+cpu		: POWER8 (architected), altivec supported
+clock		: 4190.000000MHz
+revision	: 2.0 (pvr 004d 0200)
+
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/men[Kminfo
+MemTotal:        4049408 kB
+MemFree:          262592 kB
+MemAvailable:     869568 kB
+Buffers:           48896 kB
+Cached:           898112 kB
+SwapCached:        12736 kB
+Active:           194624 kB
+Inactive:         916992 kB
+Active(anon):      73600 kB
+Inactive(anon):   116160 kB
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ tail /rp[K[Kproc/cpuinfo 
+processor	: 79
+cpu		: POWER8 (architected), altivec supported
+clock		: 4190.000000MHz
+revision	: 2.0 (pvr 004d 0200)
+
+timebase	: 512000000
+platform	: pSeries
+model		: IBM,9080-MHE
+machine		: CHRP IBM,9080-MHE
+MMU		: Hash
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ cd CS[K[K[K[K[Kls[K[Kls
+CS185C-Assignments  amazon_reviews_us_Books_v1_02.tsv  amazon_reviews_us_Books_v1_02.tsv.gz  temp
+]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ exit
+
+Script done on 2021-09-13 05:52:42+00:00 [COMMAND_EXIT_CODE="0"]
