@@ -1,18 +1,22 @@
-Script started on 2021-09-13 05:18:19+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+1) What is your home directory? How did you find out (commands used)?
+Home Directory is "/home/garcia"? I found out with the "echo $HOME" command
 ]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ echo $HOME
 /home/garcia
-]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ cd[K[Kcd
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ pwd
-/home/garcia
+
+2) What is your UID?  How did you find out (command used)?
+My UID is "1002". I found this out with the echo "$UID" command.
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ echo $UID
 1002
+
+3) To what group(s) do you belong?  How did you find out?
+I belong to the "garcia" group and found this out by running the command "groups".
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ groups
 garcia
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ groups garcia
 garcia : garcia
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ groups 100[K[K[K[K[K[K[K[K[K[Kls [K
-CS185C-Assignments                 amazon_reviews_us_Books_v1_02.tsv.gz
-amazon_reviews_us_Books_v1_02.tsv
+
+4) Make a directory "temp". If you remove execute permission for yourself from this temp directory (see chmod man page), are you still allowed to create files in that directory? Can you cd into it?  Can you "ls" it?  Can you "ls -l" it?
+Once the execute permission is removed using the command "chmod u=rw temp", I cannot create files in the directory, I cannot cd into it, or "ls" / "ls -l" into it.
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ mkdir temp
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls -l
 total 4461192
@@ -20,23 +24,16 @@ drwxrwxr-x 6 garcia garcia       4096 Sep 13 05:12 CS185C-Assignments
 -rw-rw-r-- 1 garcia garcia 3238702530 Nov 24  2017 amazon_reviews_us_Books_v1_02.tsv
 -rw-rw-r-- 1 garcia garcia 1329539135 Nov 24  2017 amazon_reviews_us_Books_v1_02.tsv.gz
 drwxrwxr-x 2 garcia garcia       4096 Sep 13 05:22 temp
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ 
-[K]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ 
 [K]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ chmod u=rw temp
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls -l
-total 4461192
-drwxrwxr-x 6 garcia garcia       4096 Sep 13 05:12 CS185C-Assignments
--rw-rw-r-- 1 garcia garcia 3238702530 Nov 24  2017 amazon_reviews_us_Books_v1_02.tsv
--rw-rw-r-- 1 garcia garcia 1329539135 Nov 24  2017 amazon_reviews_us_Books_v1_02.tsv.gz
-drw-rwxr-x 2 garcia garcia       4096 Sep 13 05:22 temp
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ cd temp
 bash: cd: temp: Permission denied
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls temp
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls temp/
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls temp/[K[K[K[K[K[K -l temp
 total 0
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ cd temp
-bash: cd: temp: Permission denied
+
+5) Are you allowed to "mv" a directory?  Are you allowed to "cp" a directory?  If you want to cp an entire directory, how would you do it?
+I am allowed to "mv" and "cp" a directory. To cp an entire directory, you must run the cp command with the "-r" flag to specify copying all files in the directory recursively.
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ mv temp CS185C-Assignments/a[Kassignment1/
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls -a[Ka
 .   .bash_history  .bashrc  .profile            amazon_reviews_us_Books_v1_02.tsv
@@ -49,13 +46,14 @@ a1.txt  temp
 cp: -r not specified; omitting directory 'temp'
 ]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ cp -r temp /
 cp: cannot create directory '/temp': Permission denied
-]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ echo $HOME
-/home/garcia
 ]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ cp -r temp /home/garcia
 ]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ cd /home/garcia
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls
 CS185C-Assignments                 amazon_reviews_us_Books_v1_02.tsv.gz
 amazon_reviews_us_Books_v1_02.tsv  temp
+
+6) Using only "ls" (and maybe "grep"), can you find out which file under directory /proc/ contains information about memory (mem) on your server? Which file contains information about the cpu's on your server?
+/proc/meminfo contains information about the server's memory and /proc/cpuinfo contains information about the server's cpu information
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls -latr /proc/
 total 4
 drwxr-xr-x  20 root             root                         4096 Jul 19 13:51 ..
@@ -923,8 +921,9 @@ dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1
 dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 101
 dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 100
 dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 10
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ 
-[K]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ 
+
+7) Use head to check the memory information file you found above. How much total memory is on your server?
+There is "4049408 kB" of memory on the server.
 [K]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/meminfo
 emTotal:        4049408 kB
 emFree:          262336 kB
@@ -936,36 +935,9 @@ Active:           196032 kB
 Inactive:         917056 kB
 Active(anon):      75008 kB
 Inactive(anon):   116288 kB
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/cpuinfo 
-.bash_history                         .cache/                               amazon_reviews_us_Books_v1_02.tsv
-.bash_logout                          .profile                              amazon_reviews_us_Books_v1_02.tsv.gz
-.bashrc                               CS185C-Assignments/                   temp/
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/cpuinfo 
-.bash_history                         .cache/                               amazon_reviews_us_Books_v1_02.tsv
-.bash_logout                          .profile                              amazon_reviews_us_Books_v1_02.tsv.gz
-.bashrc                               CS185C-Assignments/                   temp/
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/cpuinfo 
-processor	: 0
-cpu		: POWER8 (architected), altivec supported
-clock		: 4190.000000MHz
-revision	: 2.0 (pvr 004d 0200)
 
-processor	: 1
-cpu		: POWER8 (architected), altivec supported
-clock		: 4190.000000MHz
-revision	: 2.0 (pvr 004d 0200)
-
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/men[Kminfo
-emTotal:        4049408 kB
-emFree:          262592 kB
-emAvailable:     869568 kB
-Buffers:           48896 kB
-Cached:           898112 kB
-SwapCached:        12736 kB
-Active:           194624 kB
-Inactive:         916992 kB
-Active(anon):      73600 kB
-Inactive(anon):   116160 kB
+8) Then use tail to check the cpu information file you found above. How many processors are on your server? What is the processor architecture name? What is the processor speed in GHz?
+There are 79 processors on the server and the architecture is "POWER8". The processor speed is 4190MHz which is 4.19GHz.
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ tail /rp[K[Kproc/cpuinfo 
 processor	: 79
 cpu		: POWER8 (architected), altivec supported
@@ -977,20 +949,10 @@ platform	: pSeries
 model		: IBM,9080-MHE
 machine		: CHRP IBM,9080-MHE
 MU		: Hash
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ cd CS[K[K[K[K[Kls[K[Kls
-CS185C-Assignments  amazon_reviews_us_Books_v1_02.tsv  amazon_reviews_us_Books_v1_02.tsv.gz  temp
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ exit
 
-Script done on 2021-09-13 05:52:42+00:00 [COMMAND_EXIT_CODE="0"]
+9) What is the size in GB (GigaBytes) of the Amazon customer reviews uncompressed (gunzipped) file you downloaded?
 
-
-
-Script started on 2021-09-13 05:53:43+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="126" LINES="62"]
-]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment1garcia@f6linuxa11:~/CS185C-Assignments/assignment1$ grep -i "great" [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ ls
-CS185C-Assignments  amazon_reviews_us_Books_v1_02.tsv  amazon_reviews_us_Books_v1_02.tsv.gz  temp
+10) Search in the Amazon customer reviews file for the case-insensitive word "great" (i.e. "Great" or "GREAT" also count). How many reviews contain this word? You can use grep (case-insensitive) and wc.
+There are 857,172 reviews that contain the word "great".
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ grep -i "great" amazon_reviews_us_Books_v1_02.tsv | wc
  857172 178638497 1049453676
-]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ exit
-
-Script done on 2021-09-13 06:00:30+00:00 [COMMAND_EXIT_CODE="0"]
