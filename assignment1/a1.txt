@@ -926,9 +926,9 @@ dr-xr-xr-x   9 root             root                            0 Sep 13 05:41 1
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ 
 [K]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ 
 [K]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/meminfo
-MemTotal:        4049408 kB
-MemFree:          262336 kB
-MemAvailable:     869248 kB
+emTotal:        4049408 kB
+emFree:          262336 kB
+emAvailable:     869248 kB
 Buffers:           48832 kB
 Cached:           898048 kB
 SwapCached:        12736 kB
@@ -956,9 +956,9 @@ clock		: 4190.000000MHz
 revision	: 2.0 (pvr 004d 0200)
 
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ head /proc/men[Kminfo
-MemTotal:        4049408 kB
-MemFree:          262592 kB
-MemAvailable:     869568 kB
+emTotal:        4049408 kB
+emFree:          262592 kB
+emAvailable:     869568 kB
 Buffers:           48896 kB
 Cached:           898112 kB
 SwapCached:        12736 kB
@@ -976,7 +976,7 @@ timebase	: 512000000
 platform	: pSeries
 model		: IBM,9080-MHE
 machine		: CHRP IBM,9080-MHE
-MMU		: Hash
+MU		: Hash
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ cd CS[K[K[K[K[Kls[K[Kls
 CS185C-Assignments  amazon_reviews_us_Books_v1_02.tsv  amazon_reviews_us_Books_v1_02.tsv.gz  temp
 ]0;garcia@f6linuxa11: ~garcia@f6linuxa11:~$ exit
