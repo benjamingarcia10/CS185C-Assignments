@@ -1,0 +1,165 @@
+    1  ls -altr
+    2  passwd
+    3  echo $HOME
+    4  cd
+    5  pwd
+    6  echo $UID
+    7  groups
+    8  groups garcia
+    9  ls
+   10  mkdir temp
+   11  ls -l
+   12  chmod u=rw temp
+   13  ls -l
+   14  cd temp
+   15  ls temp
+   16  ls temp/
+   17  ls -l temp
+   18  cd temp
+   19  mv temp CS185C-Assignments/assignment1/
+   20  ls -a
+   21  cd CS185C-Assignments/
+   22  cd assignment1/
+   23  ls
+   24  cp temp /
+   25  cp -r temp /
+   26  echo $HOME
+   27  cp -r temp /home/garcia
+   28  cd /home/garcia
+   29  ls
+   30  ls -latr /proc/
+   31  head /proc/meminfo
+   32  head /proc/cpuinfo 
+   33  head /proc/meminfo
+   34  tail /proc/cpuinfo 
+   35  ls
+   36  cd
+   37  ls
+   38  grep -i "great" amazon_reviews_us_Books_v1_02.tsv | wc
+   39  gh repo clone benjamingarcia10/CS185C-Assignments
+   40  git clone https://github.com/benjamingarcia10/CS185C-Assignments.git
+   41  ls
+   42  cd CS185C-Assignments/
+   43  ls
+   44  mkdir assignment1
+   45  cd ../
+   46  ;s
+   47  ls
+   48  screen -S unzip
+   49  cd CS185C-Assignments/
+   50  ls
+   51  cd assignment1/
+   52  script a1.txt
+   53  ls
+   54  vi a1.txt
+   55  clear
+   56  script a1-2.txt
+   57  git push origin master
+   58  ls
+   59  rm temp
+   60  rm -r temp
+   61  ls
+   62  head a1-2.txt 
+   63  git push origin master
+   64  git add .
+   65  git status
+   66  git commit -m "assignment 1 script"
+   67  git config --global user.email "benjamingarcia10@gmail.com"
+   68  git config --global user.name "Benjamin Garcia"
+   69  git push origin master
+   70  git status
+   71  git add .
+   72  git commit -m "Assignment 1 script"
+   73  git push origin master
+   74  perl -pe 's/\x1b\[[0-9;]*[mG]//g' a1.txt > a1.txt.clean
+   75  tr -cd '\11\12\15\40-\176' < a1.txt.clean > a1.txt.clean2
+   76  ls
+   77  head a1.txt.clean2
+   78  perl -pe 's/\x1b\[[0-9;]*[mG]//g' a1-2.txt > a1-2.txt.clean
+   79  tr -cd '\11\12\15\40-\176' < a1-2.txt.clean > a1-2.txt.clean2
+   80  ls
+   81  rm a1-2.txt.clean
+   82  rm a1.txt.clean
+   83  ls
+   84  git add .
+   85  git commit -m "Cleaned scripts"
+   86  git push
+   87  gh auth login
+   88  git auth login
+   89  clear
+   90  git config --global credential.helper manager
+   91  git status
+   92  git add .
+   93  git status
+   94  git log
+   95  git push
+   96  git push origin master
+   97  git status
+   98  ls
+   99  rm a1-2.txt
+  100  rm a1.txt
+  101  git status
+  102  git add .
+  103  git commit -m "Removed non cleaned scripts"
+  104  git push
+  105  git config --global --unset credential.helper
+  106  git config --global credential.helper manager-core
+  107  git config --global --unset credential.helper
+  108  git config --global credential.helper store
+  109  git push
+  110  ls
+  111  mv a1-2.txt.clean2 a1-2.txt
+  112  mv a1.txt.clean2 a1.txt
+  113  ls
+  114  git add .
+  115  git commit -m "Renamed files"
+  116  git push
+  117  git pulll
+  118  git pull
+  119  ls
+  120  rm a1-2.txt
+  121  git add .
+  122  git commit -m "Remove old file"
+  123  git push
+  124  ls
+  125  sed -i "s/^M//g" a1.txt
+  126  git status
+  127  git add .
+  128  git commit -m "Cleaned files"
+  129  git push
+  130  ls
+  131  mkdir temp
+  132  chmod u=rw temp
+  133  ls
+  134  touch temp/newfile.txt
+  135  rm -r temp
+  136  ls
+  137  git status
+  138  10) Search in the Amazon customer reviews file for the case-insensitive
+  139  clear
+  140  head /proc/meminfo
+  141  tail /proc/cpuinfo
+  142  cd
+  143  ls
+  144  wc amazon_reviews_us_Books_v1_02.tsv
+  145  git pull
+  146  cd CS185C-Assignments/
+  147  git pull
+  148  git log
+  149  clear
+  150  cd
+  151  ls -latr
+  152  ls -sh
+  153  ls -latrsh
+  154  ls -latrs
+  155  cd CS185C-Assignments/
+  156  git pull
+  157  ls
+  158  cd CS185C-Assignments/
+  159  ls
+  160  mkdir worksheet3
+  161  cd ../
+  162  cd CS185C-Assignments/worksheet3
+  163  script ws3.txt
+  164  less ws3.txt
+  165  history > cmds.log
