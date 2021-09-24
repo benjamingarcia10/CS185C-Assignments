@@ -9,3 +9,6 @@ ProductID	Mean	Variance
 043935806X	1.58	88.25
 0439139597	1.51	48.42
 0525947647	11.53	1178.32
+
+Do you think the means and/or variances of helpfulness values may differ significantly between different products or customers?
+I think the means and variances of helpfulness values will differ very significantly between all the products and customers since just off this sample size of 6, it is already a pretty large spread.
