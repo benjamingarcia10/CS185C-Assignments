@@ -1,0 +1,115 @@
+    1  passwd
+    2  git clone https://github.com/benjamingarcia10/CS185C-Assignments.git
+    3  git pull
+    4  cd CS185C-Assignments/
+    5  ls
+    6  git pull
+    7  cd ../
+    8  ls
+    9  wget http://ftp.gnu.org/gnu/datamash/datamash-1.3.tar.gz
+   10  tar -xzf datamash-1.3.tar.gz
+   11  cd datamash-1.3
+   12  ./configure
+   13  make
+   14  make check
+   15  for file in `ls ../CS185C-Assignments/assignment2/CUSTOMERS/` ; do ./datamash -W ppearson 1:2 < ../CS185C-Assignments/assignment2/CUSTOMERS/$file >> ../CS185C-Assignments/assignment2/correlation.txt; done
+   16  cd ../CS185C-Assignments/assignment2
+   17  ls
+   18  vi correlation.txt 
+   19  git status
+   20  git add .
+   21  mv correlation.txt customers_correlation.txt
+   22  git add .
+   23  git status
+   24  git commit -m "Added correlation from datamash"
+   25  git config --global user.email "benjamingarcia10@gmail.com"
+   26  git config --global user.name "Benjamin Garcia"
+   27  git config --global credential.helper manager
+   28  git status
+   29  git push
+   30  git commit -m "Added correlation from datamash"
+   31  git status
+   32  git push
+   33  git status
+   34  git push
+   35  ls
+   36  perl -pe 's/\x1b\[[0-9;]*[mG]//g' a2.txt > a2.txt.clean
+   37  tr -cd '\11\12\15\40-\176' < a2.txt.clean > a2.txt.clean2
+   38  sed -i "s///g" a2.txt.clean2
+   39  ls
+   40  vi a2.txt.clean2
+   41  rm a2.txt.clean
+   42  mv a2.txt.clean2 a2.txt.clean
+   43  git status
+   44  git add .
+   45  git commit -m "Cleaned script"
+   46  git push
+   47  git config --global credential.helper store
+   48  git push
+   49  ls
+   50  cd ../../
+   51  ls
+   52  cd CS185C-Assignments/
+   53  ls
+   54  git pull
+   55  wc customerids.txt.sorted.uniqcount.reversed -l
+   56  wc -l customerids.txt.sorted.uniqcount.reversed 
+   57  wc -l productids.txt.sorted.uniqcount.reversed 
+   58  cd ../
+   59  l
+   60  tar -xzf amazon_reviews*
+   61  gzip -d amazon_reviews_us_Books_v1_02.tsv.gz 
+   62  wc -l customerids.txt.sorted.uniqcount.reversed
+   63  wc -l ../customerids.txt.sorted.uniqcount.reversed 
+   64  mkdir CUSTOMERS
+   65  ls
+   66  head -n 5 ../customerids.txt.sorted.uniqcount.reversed 
+   67  head -n 5 ../productids.txt.sorted.uniqcount.reversed 
+   68  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed 
+   69  sed '3!d' ../customerids.txt.sorted.uniqcount.reversed 
+   70  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '	' '{print $2}'
+   71  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'
+   72  vi ../customerids.txt.sorted.uniqcount.reversed 
+   73  $customerId =  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '    ' '{print $2}'
+   74  customerId =  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '    ' '{print $2}'
+   75  customerId= sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '    ' '{print $2}'
+   76  customer
+   77  customerId=`sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '{print $2}'`
+   78  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '{print $2}'
+   79  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '	' '{print $2}'
+   80  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'
+   81  mkdir CUSTOMERS
+   82  for i in {1..1000}; do id=$(sed '${i}!d' ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+   83  ls
+   84  ls CUSTOMERS/
+   85  for i in {1..1000}; do id=$(sed '$i!d' ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+   86  ls
+   87  ls CUSTOMERS/
+   88  mkdir CUSTOMERS
+   89  for i in {1..1000}; do id=$(sed '${i}!d' ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+   90  for i in {1..1000}; do id=$(sed "${i}\!d" ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+   91  for i in {1..1000}; do id=$(sed "$i\!d" ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+   92  ls
+   93  script ws5.txt
+   94  ls
+   95  rm ws5.txt 
+   96  ls
+   97  rm -r CUSTOMERS/
+   98  script ws5.txt
+   99  rm ws5.txt 
+  100  rm -r CUSTOMERS/
+  101  script ws5.txt
+  102  rm -r CUSTOMERS/
+  103  rm ws5.txt 
+  104  for i in {1..1000}; do id=$(sed '$i!d" ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; done
+  105  for i in {1..1000}; do id=$(sed '1!d" ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; done
+  106  ;
+  107  ls
+  108  mkdir CUSTOMERS
+  109  for i in {1..1000}; do id=$(sed -n "${i}p" ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+  110  ls
+  111  cd CUSTOMERS
+  112  ls -l | wc
+  113  ls
+  114  vi 31844968.txt 
+  115  history > cmds.log
