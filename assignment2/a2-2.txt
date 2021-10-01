@@ -1,0 +1,385 @@
+Script started on 2021-10-01 05:27:15+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="169" LINES="49"]
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ for file in `ls CUSTOMERS_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 CUSTOMERS_INFO/$file`; do total=$(echo $total+$i | bc); ((count ++)); done; echo "scale=2; $total/$count" | bc >> customer_mean.txt; done
+20595117.txt
+30559999.txt
+35004134.txt
+35985708.txt
+36642996.txt
+38491967.txt
+38672733.txt
+39134375.txt
+39569598.txt
+41012519.txt
+42800127.txt
+43546353.txt
+45041039.txt
+45193257.txt
+45273033.txt
+45284807.txt
+46134316.txt
+46983871.txt
+49042814.txt
+49115690.txt
+49148452.txt
+49202417.txt
+49273674.txt
+49355567.txt
+49447323.txt
+49693975.txt
+49750558.txt
+49786731.txt
+49992211.txt
+50057481.txt
+50068216.txt
+50122160.txt
+50199793.txt
+50378566.txt
+50389232.txt
+50592435.txt
+50608834.txt
+50652563.txt
+50702879.txt
+50732546.txt
+50736950.txt
+50761804.txt
+50774468.txt
+50776149.txt
+50881246.txt
+50895620.txt
+50913245.txt
+50941451.txt
+51010391.txt
+51065232.txt
+51110953.txt
+51142763.txt
+51145127.txt
+51147790.txt
+51199159.txt
+51210331.txt
+51243012.txt
+51247650.txt
+51325095.txt
+51379338.txt
+51809405.txt
+51915884.txt
+51917998.txt
+51934027.txt
+51987970.txt
+52008531.txt
+52012289.txt
+52173832.txt
+52223435.txt
+52254603.txt
+52266433.txt
+52447634.txt
+52476938.txt
+52496677.txt
+52500542.txt
+52517734.txt
+52564468.txt
+52615377.txt
+52697458.txt
+52706646.txt
+52753467.txt
+52774618.txt
+52793250.txt
+52797744.txt
+52830980.txt
+52845727.txt
+52894384.txt
+52938698.txt
+52947077.txt
+52966385.txt
+53008075.txt
+53009736.txt
+53016962.txt
+53037408.txt
+53047425.txt
+53052943.txt
+53071109.txt
+53072811.txt
+53082946.txt
+53084107.txt
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ ls
+[0m[01;34mCUSTOMERS[0m  [01;34mCUSTOMERS_INFO[0m  [01;34mPRODUCTS[0m  [01;34mPRODUCTS_INFO[0m  a2-1.txt  a2-2.txt  a2.txt  customer_mean.txt  customerids.top100  productids.top100
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ w customer_mean.txt
+100 100 562 customer_mean.txt
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ vi customer_mean.txt
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"customer_mean.txt" 100L, 562C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H7.12
+8.86
+13.55
+3.23
+10.67
+6.77
+6.15
+57.23
+21.17
+9.43
+2.91
+19.06
+3.99
+17.06
+6.38
+10.32
+8.68
+11.37
+10.11
+4.87
+21.32
+2.67
+15.13
+14.79
+9.12
+4.97
+5.94
+38.16
+10.49
+25.13
+7.44
+5.97
+18.37
+5.08
+11.08
+10.17
+6.10
+4.39
+19.04
+5.85
+3.31
+33.47
+9.42
+12.46
+16.56
+25.97
+11.38
+20.16[49;152H1,1[11CTop[1;1H[?25h[?25l[49;142H:[1;1H[49;1H[K[49;1H:[?2004h[?25hq[?25l[?2004l[23;2t[23;1t[49;1H[K[49;1H[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ vi customer_mean.txt[1Pw[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kfor file in `ls CUSTOMERS_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 CUSTOMERS_INFO/$file`; do total=$(echo $total+$i | bc); ((count ++)); done; echo "scale=2; $total/$count" | bc >> customer_mean.txt; done[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C^C
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ ls PRODUCTS_INFO/
+0060193395.txt  0060987103.txt  0312278586.txt  0345417623.txt  0393317552.txt  0439139597.txt  0446672211.txt  0590353403.txt  0679781587.txt  0842329129.txt
+0060392452.txt  0062502182.txt  0312857691.txt  0374332657.txt  0399142789.txt  043935806X.txt  0446677450.txt  059035342X.txt  0684801523.txt  0895260174.txt
+0060514558.txt  0066214130.txt  0312864256.txt  0375826688.txt  0399144463.txt  0439784549.txt  0449004023.txt  0609610597.txt  068484267X.txt  0895261901.txt
+0060582510.txt  0140177396.txt  0312864590.txt  038529929X.txt  039914563X.txt  0440212561.txt  0451191145.txt  0671021001.txt  0689817851.txt  0971453209.txt
+0060761288.txt  014028009X.txt  0316011770.txt  0385335482.txt  039915079X.txt  0440219078.txt  0451524934.txt  0671025368.txt  0743222245.txt  0975599518.txt
+0060763957.txt  014131088X.txt  0316601950.txt  0385337116.txt  0399150897.txt  0440414806.txt  0451526341.txt  0671027344.txt  0785263535.txt  1400046610.txt
+0060875410.txt  0142001740.txt  0316666343.txt  0385484518.txt  0399501487.txt  0446310786.txt  0525947647.txt  0671027360.txt  0786868716.txt  1400050308.txt
+0060928336.txt  0156027321.txt  0316769487.txt  0385497466.txt  0425198243.txt  044652252X.txt  0553272535.txt  0671524313.txt  0812511816.txt  1558743669.txt
+0060930535.txt  0310205719.txt  0345340426.txt  038550120X.txt  0439064864.txt  0446532231.txt  0553375407.txt  0679444815.txt  0812548051.txt  1576734587.txt
+0060938455.txt  0312195516.txt  0345342968.txt  0385504209.txt  0439136350.txt  0446608955.txt  0553573403.txt  0679735771.txt  0812550706.txt  1594480001.txt
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ ls PRODUCTS_INFO/vi customer_mean.txt[1Pw[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kfor file in `ls CUSTOMERS_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 CUSTOMERS_INFO/$file`; do total=$(echo $total+$i | bc); ((count ++)); done; echo "scale=2; $total/$count" | bc >> customer_mean.txt; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO/$file`; do [1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO/$file`; do t[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO/$file`; do to[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO/$file`; do tot[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO/$file`; do tota[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO/$file`; do total[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO/$file`; do total=[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO/$file`; do total=$[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO/$file`; do total=$([1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CP_INFO/$file`; do total=$[1@([A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CR_INFO/$file`; do total=[1@$[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CO_INFO/$file`; do total[1@=[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CD_INFO/$file`; do tota[1@l[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CU_INFO/$file`; do tot[1@a[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CC_INFO/$file`; do to[1@t[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CT_INFO/$file`; do t[1@o[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CS_INFO/$file`; do [1@t[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do t[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do to[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do tot[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do tota[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do total[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do total=[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do total=$[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do total=$([1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do total=$(e[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CP_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do total=$([1@e[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CR_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do total=$[1@([A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CO_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do total=[1@$[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CD_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do total[1@=[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CU_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do tota[1@l[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CC_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do tot[1@a[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CT_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do to[1@t[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CS_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 1 PRODUCTS_INFO/$file`; do t[1@o[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C PRODUCTS_INFO/$file`; do to[1P[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2 PRODUCTS_INFO/$file`; do t[1@o[A]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1@p[1@r[1@o[1@d[1@u[1@c[1@t[1@s[C[1@_[1@r[1@a[1@t[1@i[1@n[1@g[1@s[C[C[C[1P
+0060193395.txt
+0060392452.txt
+0060514558.txt
+0060582510.txt
+0060761288.txt
+0060763957.txt
+0060875410.txt
+0060928336.txt
+0060930535.txt
+0060938455.txt
+0060987103.txt
+0062502182.txt
+0066214130.txt
+0140177396.txt
+014028009X.txt
+014131088X.txt
+0142001740.txt
+0156027321.txt
+0310205719.txt
+0312195516.txt
+0312278586.txt
+0312857691.txt
+0312864256.txt
+0312864590.txt
+0316011770.txt
+0316601950.txt
+0316666343.txt
+0316769487.txt
+0345340426.txt
+0345342968.txt
+0345417623.txt
+0374332657.txt
+0375826688.txt
+038529929X.txt
+0385335482.txt
+0385337116.txt
+0385484518.txt
+0385497466.txt
+038550120X.txt
+0385504209.txt
+0393317552.txt
+0399142789.txt
+0399144463.txt
+039914563X.txt
+039915079X.txt
+0399150897.txt
+0399501487.txt
+0425198243.txt
+0439064864.txt
+0439136350.txt
+0439139597.txt
+043935806X.txt
+0439784549.txt
+0440212561.txt
+0440219078.txt
+0440414806.txt
+0446310786.txt
+044652252X.txt
+0446532231.txt
+0446608955.txt
+0446672211.txt
+0446677450.txt
+0449004023.txt
+0451191145.txt
+0451524934.txt
+0451526341.txt
+0525947647.txt
+0553272535.txt
+0553375407.txt
+0553573403.txt
+0590353403.txt
+059035342X.txt
+0609610597.txt
+0671021001.txt
+0671025368.txt
+0671027344.txt
+0671027360.txt
+0671524313.txt
+0679444815.txt
+0679735771.txt
+0679781587.txt
+0684801523.txt
+068484267X.txt
+0689817851.txt
+0743222245.txt
+0785263535.txt
+0786868716.txt
+0812511816.txt
+0812548051.txt
+0812550706.txt
+0842329129.txt
+0895260174.txt
+0895261901.txt
+0971453209.txt
+0975599518.txt
+1400046610.txt
+1400050308.txt
+1558743669.txt
+1576734587.txt
+1594480001.txt
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ w [K[Kw [K[Kl
+total 220
+drwxrwxr-x 9 garcia garcia  4096 Sep 29 05:13 [0m[01;34m..[0m
+-rw-rw-r-- 1 garcia garcia   900 Sep 29 05:19 customerids.top100
+-rw-rw-r-- 1 garcia garcia  1100 Sep 29 05:23 productids.top100
+drwxrwxr-x 2 garcia garcia  4096 Sep 29 07:34 [01;34mPRODUCTS[0m
+-rw-rw-r-- 1 garcia garcia 82437 Sep 29 07:38 a2.txt
+drwxrwxr-x 2 garcia garcia  4096 Sep 30 04:26 [01;34mPRODUCTS_INFO[0m
+drwxrwxr-x 2 garcia garcia  4096 Sep 30 04:43 [01;34mCUSTOMERS[0m
+-rw-rw-r-- 1 garcia garcia 71592 Sep 30 04:47 a2-1.txt
+drwxrwxr-x 2 garcia garcia  4096 Oct  1 04:45 [01;34mCUSTOMERS_INFO[0m
+-rw-rw-r-- 1 garcia garcia   562 Oct  1 05:30 customer_mean.txt
+drwxrwxr-x 6 garcia garcia  4096 Oct  1 05:33 [01;34m.[0m
+-rw-rw-r-- 1 garcia garcia 20480 Oct  1 05:34 a2-2.txt
+-rw-rw-r-- 1 garcia garcia   500 Oct  1 05:36 products_rating_mean.txt
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ w products_rating_mean.txt
+100 100 500 products_rating_mean.txt
+]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ vi products_rating_mean.txt 
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"products_rating_mean.txt" 100L, 500C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H4.20
+3.59
+3.04
+3.76
+3.08
+3.35
+3.16
+3.97
+4.09
+4.28
+3.94
+4.03
+3.28
+4.30
+4.02
+4.57
+4.00
+4.12
+3.73
+4.20
+3.66
+2.75
+3.31
+1.68
+3.25
+3.21
+3.80
+4.07
+4.65
+4.10
+3.73
+4.67
+3.59
+2.91
+4.35
+2.50
+4.41
+2.63
+3.80
+3.47
+3.92
+3.90
+3.09
+2.51
+2.24
+1.90
+3.86
+2.48[49;152H1,1[11CTop[1;1H[?25h[?25l[49;142H:[1;1H[49;1H[K[49;1H:[?2004h[?25hq[?25l[?2004l[23;2t[23;1t[49;1H[K[49;1H[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ vi products_rating_mean.txt [2Pw products_rating_mean.txtl[Kfor file in `ls PRODUCTS_INFO` ; do echo $file; total=0; count=0; for i in `cut -d ' ' -f 2 PRODUCTS_INFO/$file`; do total=$(echo $total+$i | bc); ((count ++)); done; echo "scale=2; $total/$count" | bc >> products_rating_mean.txt; done[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls PRODUCTS_INFO/[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi customer_mean.txt
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[1;49r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[49;1H"customer_mean.txt" 100L, 562C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H7.12
+8.86
+13.55
+3.23
+10.67
+6.77
+6.15
+57.23
+21.17
+9.43
+2.91
+19.06
+3.99
+17.06
+6.38
+10.32
+8.68
+11.37
+10.11
+4.87
+21.32
+2.67
+15.13
+14.79
+9.12
+4.97
+5.94
+38.16
+10.49
+25.13
+7.44
+5.97
+18.37
+5.08
+11.08
+10.17
+6.10
+4.39
+19.04
+5.85
+3.31
+33.47
+9.42
+12.46
+16.56
+25.97
+11.38
+20.16[49;152H1,1[11CTop[1;1H[?25h[?25l[49;142H:[1;1H[49;1H[K[49;1H:[?2004h[?25hq[?25l[?2004l[23;2t[23;1t[49;1H[K[49;1H[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t]0;garcia@f6linuxa11: ~/CS185C-Assignments/assignment2garcia@f6linuxa11:~/CS185C-Assignments/assignment2$ exit
+
+Script done on 2021-10-01 05:39:08+00:00 [COMMAND_EXIT_CODE="0"]
