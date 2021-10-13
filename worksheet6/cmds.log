@@ -1,0 +1,343 @@
+    1  passwd
+    2  git clone https://github.com/benjamingarcia10/CS185C-Assignments.git
+    3  git pull
+    4  cd CS185C-Assignments/
+    5  ls
+    6  git pull
+    7  cd ../
+    8  ls
+    9  wget http://ftp.gnu.org/gnu/datamash/datamash-1.3.tar.gz
+   10  tar -xzf datamash-1.3.tar.gz
+   11  cd datamash-1.3
+   12  ./configure
+   13  make
+   14  make check
+   15  for file in `ls ../CS185C-Assignments/assignment2/CUSTOMERS/` ; do ./datamash -W ppearson 1:2 < ../CS185C-Assignments/assignment2/CUSTOMERS/$file >> ../CS185C-Assignments/assignment2/correlation.txt; done
+   16  cd ../CS185C-Assignments/assignment2
+   17  ls
+   18  vi correlation.txt 
+   19  git status
+   20  git add .
+   21  mv correlation.txt customers_correlation.txt
+   22  git add .
+   23  git status
+   24  git commit -m "Added correlation from datamash"
+   25  git config --global user.email "benjamingarcia10@gmail.com"
+   26  git config --global user.name "Benjamin Garcia"
+   27  git config --global credential.helper manager
+   28  git status
+   29  git push
+   30  git commit -m "Added correlation from datamash"
+   31  git status
+   32  git push
+   33  git status
+   34  git push
+   35  ls
+   36  perl -pe 's/\x1b\[[0-9;]*[mG]//g' a2.txt > a2.txt.clean
+   37  tr -cd '\11\12\15\40-\176' < a2.txt.clean > a2.txt.clean2
+   38  sed -i "s///g" a2.txt.clean2
+   39  ls
+   40  vi a2.txt.clean2
+   41  rm a2.txt.clean
+   42  mv a2.txt.clean2 a2.txt.clean
+   43  git status
+   44  git add .
+   45  git commit -m "Cleaned script"
+   46  git push
+   47  git config --global credential.helper store
+   48  git push
+   49  ls
+   50  cd ../../
+   51  ls
+   52  cd CS185C-Assignments/
+   53  ls
+   54  git pull
+   55  wc customerids.txt.sorted.uniqcount.reversed -l
+   56  wc -l customerids.txt.sorted.uniqcount.reversed 
+   57  wc -l productids.txt.sorted.uniqcount.reversed 
+   58  cd ../
+   59  l
+   60  tar -xzf amazon_reviews*
+   61  gzip -d amazon_reviews_us_Books_v1_02.tsv.gz 
+   62  wc -l customerids.txt.sorted.uniqcount.reversed
+   63  wc -l ../customerids.txt.sorted.uniqcount.reversed 
+   64  mkdir CUSTOMERS
+   65  ls
+   66  head -n 5 ../customerids.txt.sorted.uniqcount.reversed 
+   67  head -n 5 ../productids.txt.sorted.uniqcount.reversed 
+   68  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed 
+   69  sed '3!d' ../customerids.txt.sorted.uniqcount.reversed 
+   70  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '	' '{print $2}'
+   71  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'
+   72  vi ../customerids.txt.sorted.uniqcount.reversed 
+   73  $customerId =  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '    ' '{print $2}'
+   74  customerId =  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '    ' '{print $2}'
+   75  customerId= sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '    ' '{print $2}'
+   76  customer
+   77  customerId=`sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '{print $2}'`
+   78  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '{print $2}'
+   79  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk -F '	' '{print $2}'
+   80  sed '1!d' ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'
+   81  mkdir CUSTOMERS
+   82  for i in {1..1000}; do id=$(sed '${i}!d' ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+   83  ls
+   84  ls CUSTOMERS/
+   85  for i in {1..1000}; do id=$(sed '$i!d' ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+   86  ls
+   87  ls CUSTOMERS/
+   88  mkdir CUSTOMERS
+   89  for i in {1..1000}; do id=$(sed '${i}!d' ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+   90  for i in {1..1000}; do id=$(sed "${i}\!d" ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+   91  for i in {1..1000}; do id=$(sed "$i\!d" ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+   92  ls
+   93  script ws5.txt
+   94  ls
+   95  rm ws5.txt 
+   96  ls
+   97  rm -r CUSTOMERS/
+   98  script ws5.txt
+   99  rm ws5.txt 
+  100  rm -r CUSTOMERS/
+  101  script ws5.txt
+  102  rm -r CUSTOMERS/
+  103  rm ws5.txt 
+  104  for i in {1..1000}; do id=$(sed '$i!d" ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; done
+  105  for i in {1..1000}; do id=$(sed '1!d" ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; done
+  106  ;
+  107  cd CS185C-Assignments/
+  108  mkdir worksheet5
+  109  ls
+  110  cd ../
+  111  ls
+  112  cd CS185C-Assignments/worksheet5
+  113  ls
+  114  script ws5.txt
+  115  ls
+  116  rm ws5.txt 
+  117  tmux
+  118  tmux ls
+  119  tmux
+  120  tmux ls
+  121  tmux attach -t 0
+  122  ls
+  123  mkdir CUSTOMERS
+  124  for i in {1..1000}; do id=$(sed -n "${i}p" ../customerids.txt.sorted.uniqcount.reversed | awk '{print $2}'); echo $id; grep $id ../../amazon_reviews_us_Books_v1_02.tsv >> CUSTOMERS/$id.txt; done
+  125  ls
+  126  cd CUSTOMERS
+  127  ls -l | wc
+  128  ls
+  129  vi 31844968.txt 
+  130  history > cmds.log
+  131  mv cmds.log ../cmds.log
+  132  cd ../
+  133  vi cmds.log 
+  134  cd ../
+  135  ls
+  136  ls -a
+  137  git status
+  138  touch .gitignore
+  139  vi .gitignore
+  140  cd worksheet5
+  141  git status
+  142  git add .
+  143  git status
+  144  tmux ls
+  145  tmux attach -t 0
+  146  ls
+  147  head -n 1 amazon_reviews_us_Books_v1_02.tsv 
+  148  awk -F "\t" '{print $6}' amazon_reviews_us_Books_v1_02.tsv >> product_titles.txt
+  149  ls
+  150  vi product_titles.txt 
+  151  wc -l product_titles.txt 
+  152  vi product_titles.txt 
+  153  wc -l product_titles.txt 
+  154  sort product_titles.txt 
+  155  sort product_titles.txt -u >> product_titles.sorted.duplicatesremoved
+  156  wc -l product_titles.sorted.duplicatesremoved 
+  157  wc -l CS185C-Assignments/productids.txt.sorted.uniqcount.reversed 
+  158  wc -l CS185C-Assignments/customerids.txt.sorted.uniqcount.reversed 
+  159  git pull
+  160  cd CS185C-Assignments/
+  161  git pull
+  162  cd assignment5
+  163  ls
+  164  cd assignment2
+  165  ls
+  166  rm a2.txt
+  167  mv a2.txt.clean a2.txt
+  168  git add .
+  169  git commit -m "Renamed clean a2 script"
+  170  git push
+  171  ls
+  172  rm -i test.txt 
+  173  ls
+  174  cd CS185C-Assignments/
+  175  ls ..
+  176  ls -a
+  177  pwd
+  178  ls ..
+  179  vi /.bashrc
+  180  cd ../
+  181  ls
+  182  vi .bashrc 
+  183  ls
+  184  cd CS185C-Assignments/
+  185  cd ../
+  186  more product_titles.sorted.duplicatesremoved 
+  187  more product_titles.sorted.duplicatesremoved -p
+  188  more -p product_titles.sorted.duplicatesremoved 
+  189  more page product_titles.sorted.duplicatesremoved 
+  190  more product_titles.sorted.duplicatesremoved 
+  191  more -p product_titles.sorted.duplicatesremoved 
+  192  clear
+  193  more product_titles.sorted.duplicatesremoved 
+  194  clear
+  195  more -p product_titles.sorted.duplicatesremoved 
+  196  ls -altr
+  197  more -p product_titles.sorted.duplicatesremoved 
+  198  vi product_titles.sorted.duplicatesremoved 
+  199  vim product_titles.s
+  200  vim product_titles.sorted.duplicatesremoved 
+  201  vi product_titles.sorted.duplicatesremoved 
+  202  cd CS185C-Assignments/assignment2
+  203  ls
+  204  cd /
+  205  ls
+  206  ls usr
+  207  cd home/
+  208  ls
+  209  cd garcia
+  210  ls
+  211  vi product_titles.sorted.duplicatesremoved 
+  212  display
+  213  ls [A-Z]
+  214  display [AZ]
+  215  ls A...Z
+  216  ls A ... Z
+  217  ls [AZ]
+  218  ls [A-Z]
+  219  ls
+  220  wc -l product_titles.sorted.duplicatesremoved | tee outfile
+  221  ls
+  222  vi outfile 
+  223  rm outfile 
+  224  echo $HOME
+  225  vi product_titles.sorted.duplicatesremoved 
+  226  echo $home
+  227  echo $HOME
+  228  echo HOME
+  229  echo " \"UNIX\" "
+  230  echo "\"UNIX\""
+  231  ls -altr
+  232  vi test2.txt 
+  233  grep test2.txt product_titles.txt "UNIX"
+  234  grep UNIX File?
+  235  touch File1
+  236  vi File1
+  237  cp File1 File2
+  238  cp File1 File3
+  239  grep UNIX File?
+  240  ls ??
+  241  cat File1 File2 newfile
+  242  cat File1 File2 >> newfile
+  243  vi newfile 
+  244  ls
+  245  vi q
+  246  cat q > a
+  247  cat q > b
+  248  cat q > c
+  249  cat q > d
+  250  find . -type f -name "?" -print
+  251  find . -type f -name '?' -print
+  252  find . -type f -name '\?' -print
+  253  cat q > ?
+  254  ls -i
+  255  mv a newfilename.txt
+  256  ls -i
+  257  vi test2.txt 
+  258  ls
+  259  rm File? ?
+  260  ls
+  261  rm newfile
+  262  rm test2.txt
+  263  ls
+  264  rm newfilename.txt 
+  265  ls
+  266  cd ../worksheet4
+  267  export DATETIME=`date "+%Y%m%d_%H%M%S"`
+  268  echo $DATETIME 
+  269  ls
+  270  cd PRODUCTS/
+  271  ls
+  272  cp 0439139597.txt 0439139597.$DATETIME.txt
+  273  ls
+  274  head -n 1 0439139597.20211013_002048.txt 
+  275  head -n 1 ../../../amazon_reviews_us_Books_v1_02.tsv 
+  276  vi 0439139597.20211013_002048.txt 
+  277  tail -n 1 0439139597.20211013_002048.txt 
+  278  crontab -l
+  279  ln -s 0439139597.20211013_002048.txt 0439139597.LATEST.txt
+  280  ls
+  281  ls -altri
+  282  ls -i
+  283  tail -n 1 0439139597.LATEST.txt 
+  284  cd ../../worksheet6
+  285  vi rating_score.cron
+  286  cd ~/CS185C-Assignments/worksheet4/PRODUCTS
+  287  cd ../../worksheet6
+  288  ls
+  289  vi rating_score.cron 
+  290  crontab rating_score.cron 
+  291  crontab -l
+  292  cd ~/CS185C-Assignments/worksheet4/PRODUCTS
+  293  ls
+  294  less 0439139597.AVGRATING.txt 
+  295  total=0; count=0; for i in `cut -f 2 ~/CS185C-Assignments/worksheet4/PRODUCTS/0439139597.LATEST.txt`; do total=$(echo $total+$i | bc); ((count ++)); done; echo "scale=2; $total/$count" | bc
+  296  vi *.AVGRATING*
+  297  cd ../../worksheet4
+  298  cd ../worksheet6
+  299  ls
+  300  crontab -r
+  301  vi rating_score.cron 
+  302  total=0; count=0; for i in `cut -f 8 ~/CS185C-Assignments/worksheet4/PRODUCTS/0439139597.LATEST.txt`; do total=$(echo $total+$i | bc); ((count ++)); done; echo "scale=2; $total/$count" | bc > ~/CS185C-Assignments/worksheet4/PRODUCTS/0439139597.AVGRATING.txt 2>&1
+  303  cd ../worksheet4
+  304  cd PRODUCTS/
+  305  ls
+  306  vi 0439139597.AVGRATING.txt 
+  307  rm 0439139597.AVGRATING.txt 
+  308  cd ../../worksheet6
+  309  ls
+  310  crontab rating_score.cron 
+  311  crontab -l
+  312  cd ../worksheet4/PRODUCTS/
+  313  ls
+  314  vi 0439139597.AVGRATING.txt 
+  315  cd ../../worksheet6
+  316  crontab -l
+  317  crontab -r
+  318  vi *.cron
+  319  crontab rating_score.cron 
+  320  crontab -l
+  321  cd ../worksheet4
+  322  cd P*
+  323  ls
+  324  rm 0439139597.AVGRATING.txt 
+  325  ls
+  326  vi *.AVGRATING*
+  327  crontab -r
+  328  cd ../../worksheet6
+  329  * * * * * awk '{ sum += $8 } END { if (NR > 0) print sum /NR }' ~/CS185C-Assignments/worksheet4/PRODUCTS/0439139597.LATEST.txt >> ~/CS185C-Assignments/worksheet4/PRODUCTS/0439139597.AVGRATING.txt 2>&1
+  330  awk '{ sum += $8 } END { if (NR > 0) print sum /NR }' ~/CS185C-Assignments/worksheet4/PRODUCTS/0439139597.LATEST.txt t
+  331  awk '{ sum += $8 } END { if (NR > 0) print sum /NR }' ~/CS185C-Assignments/worksheet4/PRODUCTS/0439139597.LATEST.txt
+  332  awk -F "	" '{ sum += $8 } END { if (NR > 0) print sum /NR }' ~/CS185C-Assignments/worksheet4/PRODUCTS/0439139597.LATEST.txt
+  333  vi rating_score.cron 
+  334  crontab -l
+  335  crontab rating_score.cron 
+  336  cd ../worksheet4/PRODUCTS/
+  337  ls
+  338  rm *.AVG
+  339  rm *.AVG*
+  340  ls
+  341  vi 0439139597.AVGRATING.txt 
+  342  cd ../../worksheet6
+  343  history > cmds.log

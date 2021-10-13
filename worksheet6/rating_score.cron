@@ -1,0 +1,1 @@
+* * * * * awk -F "	" '{ sum += $8 } END { if (NR > 0) print sum /NR }' ~/CS185C-Assignments/worksheet4/PRODUCTS/0439139597.LATEST.txt >> ~/CS185C-Assignments/worksheet4/PRODUCTS/0439139597.AVGRATING.txt 2>&1
