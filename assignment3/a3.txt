@@ -43,8 +43,32 @@ for file in `ls ~/CS185C-Assignments/assignment2/PRODUCTS` ; do productID=`echo 
 
 
 5) Plot the review rating stars and helpfulness scores for the top customer (the customer with the highest correlation score) in a line plot. You can find the gnuplot commands here:
+sort -k 2 -r customer_correlation.txt > customer_correlation.sorted.txt
+
+// Top scores from output
+53071109	0.57689851289561
+51065232	0.52308126332041
+52173832	0.51917603969455
+52254603	0.44273868279524
+52706646	0.39044971527043
+
+
+
+
 
 6) Plot the review rating stars and helpfulness scores for the top product (the product with the highest correlation score) in another line plot.
+sort -k 2 -r product_correlation.txt > product_correlation.sorted.txt
+
+// Top scores from output
+0060875410	0.88627167310378
+0060763957	0.74303694227162
+0895260174	0.66760818665021
+0066214130	0.65060307273362
+0525947647	0.61097378252701
+
+
+
+
 
 7) Do you think the correlation scores are more meaningful now than before in a2? Explain in a few sentences what you think.
 Yes, I think it is more meaningful now since the scores have been normalized and is not easily skewed by a high helpfulness score but only a small percentage of voters said it was helpful.
