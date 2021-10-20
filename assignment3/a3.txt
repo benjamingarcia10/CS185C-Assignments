@@ -43,6 +43,7 @@ for file in `ls ~/CS185C-Assignments/assignment2/PRODUCTS` ; do productID=`echo 
 
 
 5) Plot the review rating stars and helpfulness scores for the top customer (the customer with the highest correlation score) in a line plot. You can find the gnuplot commands here:
+
 sort -k 2 -r customer_correlation.txt > customer_correlation.sorted.txt
 
 // Top scores from output
@@ -57,6 +58,7 @@ sort -k 2 -r customer_correlation.txt > customer_correlation.sorted.txt
 
 
 6) Plot the review rating stars and helpfulness scores for the top product (the product with the highest correlation score) in another line plot.
+
 sort -k 2 -r product_correlation.txt > product_correlation.sorted.txt
 
 // Top scores from output
