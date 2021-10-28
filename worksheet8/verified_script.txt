@@ -1,0 +1,6 @@
+{
+	if (match ($12, "Y"))
+		print $0 >> "verified.txt"
+	if (match ($12, "N"))
+		print $0 >> "unverified.txt"
+}
