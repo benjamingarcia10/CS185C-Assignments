@@ -1,0 +1,79 @@
+Assignment #4
+
+Question 1:
+// Get data and unzip
+wget http://cs.stanford.edu/people/alecmgo/trainingandtestdata.zip
+unzip trainingandtestdata.zip
+
+// Get the top 100 reviews with the highest helpfulness scores (out of the first 100,000 lines only due to long wait times) and save the review body in REVIEWS/reviewID.txt
+head -n 1 ~/amazon_reviews_us_Books_v1_02.tsv
+cd ~/CS185C-Assignments/assignment4
+mkdir REVIEWS
+head -n 100000 ~/amazon_reviews_us_Books_v1_02.tsv | sort -k9 -r | head -n 100 | awk -F '\t' '{filename = $3; print $14 > "REVIEWS/"filename".txt"}'
+
+
+
+Question 2:
+cat lemmatization.sh
+{
+	#!/bin/bash
+	sed -i "s/ing[ ;.,!?:]/ /g" $1
+	sed -i "s/ed[ ;.,!?:]/ /g" $1
+	sed -i "s/s[ ;.,!?:]/ /g" $1
+}
+for file in ~/CS185C-Assignments/assignment4/REVIEWS/*; do sh lemmatization.sh $file; done
+
+
+
+Question 3:
+// stopwords-lowercase.txt contains all stopwords from provided URL in lowercase with each word on a new line
+for file in ~/CS185C-Assignments/assignment4/REVIEWS/*; do sed -ie "$(sed 's/.*/s\/\\b&\\b\/ \/g/g' stopwords-lowercase.txt)" $file; done
+
+
+
+Question 4:
+
+chmod 777 compare.sh
+cat compare.sh
+{
+	#!/bin/bash
+	# $1 = reviewID.txt file
+	# $2 = tweets file
+	
+	if [[ $# -lt 2 ]] ; then
+		echo "Missing arguments: command usage ./compare.sh reviewFile tweetsFile"
+		exit 1
+	fi
+	
+	if [[ ! -f tweetbodies.txt ]]; then
+		cat $2 | cut -d ',' -f 6- | sed 's/"//g' > tweetbodies.txt
+	fi
+	
+	reviewContent=$(cat "$1")
+	lineCount=`wc -l tweetbodies.txt | cut -d " " -f 1`
+	
+	lineNumber=1
+	until [[ $lineNumber -gt $lineCount ]]
+	do
+		line=`sed "${lineNumber}q;d" tweetbodies.txt`
+		commonWordsCount=`comm -12 <(echo "$reviewContent" | tr " " "\n" | sed '/^$/d' | sort) <(echo "$line" | tr " " "\n" | sed '/^$/d' | sort) | wc -l`
+		if [[ $commonWordsCount -ge 2 ]] ; then
+			# echo "Common words for line ${lineNumber} is ${commonWordsCount}"
+			echo $line >> $1
+		fi
+		((lineNumber++))
+	done
+	echo "Completed $1"
+}
+
+
+
+Question 5:
+time find ~/CS185C-Assignments/assignment4/REVIEWS/ -name '*.txt' | ~/parallel-20211022/src/parallel "~/CS185C-Assignments/assignment4/compare.sh {} ~/training.1600000.processed.noemoticon.csv"
+// Server keeps crashing because too many tweets to scan
+8.637s
+
+
+
+Question 6:
+// Server crashes when sorting words
