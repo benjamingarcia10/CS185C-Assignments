@@ -1,0 +1,213 @@
+Assignment #5 - CS 185C
+
+cd ~
+wget https://prdownloads.sourceforge.net/weka/weka-3-8-5-azul-zulu-linux.zip
+unzip weka-3-8-5-azul-zulu-linux.zip
+cd ~/weka-3-8-5
+export CLASSPATH=$CLASSPATH:`pwd`/weka.jar
+tmux new-session -s a5 or tmux attach -t a5
+script a5.txt
+
+
+
+Question 3:
+cd ~/CS185C-Assignments
+mkdir assignment5
+mkdir assignment5/ALL_REVIEWS
+cp -r assignment4/REVIEWS/ assignment5/ALL_REVIEWS
+cp -r assignment4/REVIEWS_UNHELPFUL/ assignment5/ALL_REVIEWS
+cd assignment5
+java weka.core.converters.TextDirectoryLoader -dir ALL_REVIEWS/ > amazon_reviews_tweets.arff
+
+
+
+Question 4:
+vi amazon_reviews_tweets.arff
+
+
+
+Question 5:
+java -Xmx1024m weka.filters.unsupervised.attribute.StringToWordVector -i amazon_reviews_tweets.arff -o amazon_reviews_tweets_training.arff -M 2
+
+
+
+Question 6:
+The word vector format outputs all the possible words within the original .arff file as an attribute. The numbers represent word occurences in each file and how common they are compared to each other.
+
+
+
+Question 7:
+java -Xmx1024m weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.trees.M5P -num-decimal-places 4 -t amazon_reviews_tweets_training.arff -d amazon_reviews_tweets_training.model -c 1 > amazon_reviews_tweets_results.txt
+
+Time taken to build model: 3.22 seconds
+
+Time taken to test model on training data: 0.09 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         186               93      %
+Incorrectly Classified Instances        14                7      %
+Kappa statistic                          0.86
+Mean absolute error                      0.209
+Root mean squared error                  0.2738
+Relative absolute error                 41.8095 %
+Root relative squared error             54.7596 %
+Total Number of Instances              200
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.950    0.090    0.913      0.950    0.931      0.861    0.986     0.986     REVIEWS_UNHELPFUL
+                 0.910    0.050    0.948      0.910    0.929      0.861    0.986     0.987     REVIEWS
+Weighted Avg.    0.930    0.070    0.931      0.930    0.930      0.861    0.986     0.986
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 95  5 |  a = REVIEWS_UNHELPFUL
+  9 91 |  b = REVIEWS
+
+Time taken to perform cross-validation: 19.4 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         127               63.5    %
+Incorrectly Classified Instances        73               36.5    %
+Kappa statistic                          0.27
+Mean absolute error                      0.3749
+Root mean squared error                  0.4797
+Relative absolute error                 74.99   %
+Root relative squared error             95.939  %
+Total Number of Instances              200
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.620    0.350    0.639      0.620    0.629      0.270    0.726     0.676     REVIEWS_UNHELPFUL
+                 0.650    0.380    0.631      0.650    0.640      0.270    0.726     0.766     REVIEWS
+Weighted Avg.    0.635    0.365    0.635      0.635    0.635      0.270    0.726     0.721
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 62 38 |  a = REVIEWS_UNHELPFUL
+ 35 65 |  b = REVIEWS
+
+
+
+Question 8:
+chmod 777 text_binary_classify.sh
+vi text_binary_classify.sh
+{
+#!/bin/bash
+
+# Specify the weka path as the first argument and the directory containing all files to be compared as the second argument. The results can then be outputed to a certain file with >.
+
+if [[ $# -lt 2 ]]
+then
+        echo "text_binary_classify.sh needs two arguments: text_binary_classify.sh path_to_weka_directory path_to_files_directory(.arff file)"
+        exit 1
+fi
+
+if [[ ! -d $1 ]]
+then
+        echo "path_to_weka_directory does not exist"
+fi
+
+if [[ ! -d $2 ]]
+then
+        echo "path_to_files_directory (.arff file) does not exist"
+fi
+
+java weka.core.converters.TextDirectoryLoader -dir $2 > temp_reviews.arff
+java -Xmx1024m weka.filters.unsupervised.attribute.StringToWordVector -i temp_reviews.arff -o temp_reviews_training.arff -M 2
+java -Xmx1024m weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.trees.M5P -num-decimal-places 4 -t temp_reviews_training.arff -d temp_reviews_training.model -c 1
+}
+
+
+
+Question 9:
+// Files with amazon review_body text and integrated tweets results above in Question 7
+
+// Amazon review_body text only
+mkdir AMAZON_REVIEWS
+mkdir AMAZON_REVIEWS/REVIEWS_HELPFUL
+mkdir AMAZON_REVIEWS/REVIEWS_UNHELPFUL
+
+cd AMAZON_REVIEWS/REVIEWS_HELPFUL
+head -n 1000 ~/amazon_reviews_us_Books_v1_02.tsv | sort -k9 -r | head -n 100 | awk -F '\t' '{filename = $3; print $14 >  filename".txt"}'
+
+cd ../REVIEWS_UNHELPFUL
+head -n 1000 ~/amazon_reviews_us_Books_v1_02.tsv | sort -k9 | head -n 100 | awk -F '\t' '{filename = $3; print $14 >  filename".txt"}'
+
+cd ~/CS185C-Assignments/assignment5
+./text_binary_classify.sh ~/weka-3-8-5 ~/CS185C-Assignments/assignment5/AMAZON_REVIEWS
+
+Time taken to build model: 2.6 seconds
+
+Time taken to test model on training data: 0.05 seconds
+
+=== Error on training data ===
+
+Correctly Classified Instances         189               94.5    %
+Incorrectly Classified Instances        11                5.5    %
+Kappa statistic                          0.89
+Mean absolute error                      0.2222
+Root mean squared error                  0.2774
+Relative absolute error                 44.4496 %
+Root relative squared error             55.4732 %
+Total Number of Instances              200
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.950    0.060    0.941      0.950    0.945      0.890    0.986     0.986     REVIEWS_UNHELPFUL
+                 0.940    0.050    0.949      0.940    0.945      0.890    0.986     0.988     REVIEWS_HELPFUL
+Weighted Avg.    0.945    0.055    0.945      0.945    0.945      0.890    0.986     0.987
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 95  5 |  a = REVIEWS_UNHELPFUL
+  6 94 |  b = REVIEWS_HELPFUL
+
+Time taken to perform cross-validation: 19.41 seconds
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances         109               54.5    %
+Incorrectly Classified Instances        91               45.5    %
+Kappa statistic                          0.09
+Mean absolute error                      0.462
+Root mean squared error                  0.5538
+Relative absolute error                 92.4083 %
+Root relative squared error            110.7613 %
+Total Number of Instances              200
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.490    0.400    0.551      0.490    0.519      0.091    0.572     0.564     REVIEWS_UNHELPFUL
+                 0.600    0.510    0.541      0.600    0.569      0.091    0.572     0.547     REVIEWS_HELPFUL
+Weighted Avg.    0.545    0.455    0.546      0.545    0.544      0.091    0.572     0.556
+
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 49 51 |  a = REVIEWS_UNHELPFUL
+ 40 60 |  b = REVIEWS_HELPFUL
+
+
+
+Question 10:
+It looks like the review_body text only worked better in the training results as it correctly identified 189 of the text files giving it a 94.5% accuracy compared to the 127 correctly identified files when combined with the tweets giving a 63.5% accuracy.
