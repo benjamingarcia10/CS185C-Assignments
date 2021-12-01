@@ -1,3 +1,8 @@
 # Don't include 1000 customer files from worksheet 5
 worksheet5/CUSTOMERS
 
+# Don't include big files
+assignment5/*.arff
+assignment5/*.model
+assignment5/ALL_REVIEWS
+assignment5/AMAZON_REVIEWS
