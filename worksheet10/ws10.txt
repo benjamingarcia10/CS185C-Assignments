@@ -1,0 +1,65 @@
+vi numbers.py
+
+import os
+from itertools import islice
+file_path = os.path.expanduser('~/amazon_reviews_us_Books_v1_02.tsv')
+with open(file_path) as f:
+	numbers = []
+	for line in islice(f, 1, None): #skip the header row
+		numbers.append(int(line.split("\t")[8]))
+	numbers.sort()
+count = len(numbers)
+max_num = max(numbers)
+min_num = min(numbers)
+sum_of_nums = sum(numbers)
+avg = sum_of_nums/float(count)
+print("min %s max %s avg %s" % (min_num, max_num, avg ))
+
+
+
+time python3 numbers.py
+
+min 0 max 15835 avg 9.33467921636312
+
+real    0m12.068s
+user    0m10.733s
+sys     0m0.998s
+
+
+
+vi numbers.sh
+
+#!/bin/bash
+awk -F "\t" '
+{
+	if (NR == 2)
+	{
+		count=1;
+		sum=$9;
+		min=$9;
+		max=$9;
+	}
+	if (NR > 2)
+	{
+		count+=1;
+		sum+=$9;
+		if ($9 < min) min=$9;
+		if ($9 > max) max=$9;
+	}
+}
+END { printf "min %s max %s avg %f\n", min, max, sum / count; }' ~/amazon_reviews_us_Books_v1_02.tsv
+
+
+
+chmod 777 numbers.sh
+time ./numbers.sh
+
+min 0 max 15835 avg 9.334679
+
+real    0m18.194s
+user    0m17.301s
+sys     0m0.880s
+
+
+
+The Python program ran faster on the input file with an execution speed of about 12 seconds whereas the awk script took about 18 seconds.
